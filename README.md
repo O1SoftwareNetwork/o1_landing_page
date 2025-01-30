@@ -4,4 +4,4 @@ This project is aimed at providing direction for aspiring and experienced softwa
 
 We'll also share importnat information like organization vision, mission, and values.
 
-If you'd like to get involved, visit our Discord
+If you'd like to get involved, visit our Discord or our Meetup
