@@ -2,7 +2,6 @@
 
 - [Introduction](#introduction)
 - [Getting Started](#getting-started)
-- [Installation](#installation)
 - [Usage](#usage)
 - [Branching and Jira Integration](#branching-and-jira-integration)
 - [Making Contributions](#making-contributions)
@@ -22,13 +21,13 @@ To contribute to this project, ensure you have the following installed:
 
 - Jira Access (if assigned to the project team)
 
-Fork the repository (if you are an open-source contributor) or clone it directly (if you are a core developer).
+Fork the repository (if you are an open-source contributor).
+
+[GitHub's guide on forking a repo]([https://docs.github.com/en/get-started/quickstart/fork-a-repo](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo))
+
+Clone the repository directly (if you are a core developer).
 
 `git clone https://github.com/O1SoftwareNetwork/o1_landing_page.git`
-
-## Installation
-
-Instructions on how to install dependencies and set up the project.
 
 ## Usage
 
