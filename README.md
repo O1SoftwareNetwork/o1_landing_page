@@ -23,7 +23,7 @@ To contribute to this project, ensure you have the following installed:
 
 Fork the repository (if you are an open-source contributor).
 
-[GitHub's guide on forking a repo]([https://docs.github.com/en/get-started/quickstart/fork-a-repo](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo))
+[GitHub's guide on forking a repo](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo)
 
 Clone the repository directly (if you are a core developer).
 
