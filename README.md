@@ -2,7 +2,6 @@
 
 - [Introduction](#introduction)
 - [Getting Started](#getting-started)
-- [Usage](#usage)
 - [Branching and Jira Integration](#branching-and-jira-integration)
 - [Making Contributions](#making-contributions)
   - [Core Developers](#core-developers)
@@ -15,12 +14,6 @@ Welcome to the O(1) Landing Page repository! We appreciate your contributions an
 
 ## Getting Started
 
-To contribute to this project, ensure you have the following installed:
-
-- Git
-
-- Jira Access (if assigned to the project team)
-
 Fork the repository (if you are an open-source contributor).
 
 [GitHub's guide on forking a repo](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo)
@@ -29,17 +22,13 @@ Clone the repository directly (if you are a core developer).
 
 `git clone https://github.com/O1SoftwareNetwork/o1_landing_page.git`
 
-## Usage
-
-How to run and use the project.
-
 ## Branching and Jira Integration
 
 Our project integrates directly with Jira, so all branches must contain a Jira issue ID in the branch name. This ensures automatic tracking of progress.
 
 Branch Naming Convention:
 
-`jira-{ISSUE_ID}-short-description`
+`{JIRA_ISSUE_ID}-short-description`
 
 Example:
 
