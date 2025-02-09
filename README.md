@@ -2,7 +2,7 @@
 
 - [Introduction](#introduction)
 - [Getting Started](#getting-started)
-- [Branching and Jira Integration](#branching-and-jira-integration)
+- [Jira Integration](#branching-and-jira-integration)
 - [Making Contributions](#making-contributions)
   - [Core Developers](#core-developers)
   - [Open-Source Contributors](#open-source-contributors)
@@ -22,21 +22,22 @@ Clone the repository directly (if you are a core developer).
 
 `git clone https://github.com/O1SoftwareNetwork/o1_landing_page.git`
 
-## Branching and Jira Integration
+## Jira Integration
 
 Our project integrates directly with Jira, so all branches must contain a Jira issue ID in the branch name. This ensures automatic tracking of progress.
 
-Branch Naming Convention:
+When you create a branch using a valid Jira ID, the corresponding issue in Jira will automatically move to the In Progress status.
+
+When the Pull Request (PR) with the Jira ID (in it's title) is merged, the issue will be moved to DONE in Jira.
+
+Branch and Pull Request Naming Convention:
+------     ------------
 
 `{JIRA_ISSUE_ID}-short-description`
 
 Example:
 
-`jira-OLP-32-add-user-authentication`
-
-When you create a branch using a valid Jira ID, the corresponding issue in Jira will automatically move to the In Progress status.
-
-When the Pull Request (PR) with the Jira ID (in it's title) is merged, the issue will be moved to DONE in Jira.
+`OLP-32-add-user-authentication`
 
 ## Making Contributions
 
