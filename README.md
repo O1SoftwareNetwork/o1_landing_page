@@ -30,8 +30,7 @@ When you create a branch using a valid Jira ID, the corresponding issue in Jira 
 
 When the Pull Request (PR) with the Jira ID (in it's title) is merged, the issue will be moved to DONE in Jira.
 
-Branch and Pull Request Naming Convention:
-------     ------------
+<ul>Branch</ul> and <ul>Pull Request</ul> Naming Convention:
 
 `{JIRA_ISSUE_ID}-short-description`
 
