@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>O(1) Landing Page</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="CSS/normalize.css">
+    <link rel="stylesheet" href="CSS/styles.css" />
 
 </head>
 <body>
     <header>
     <!-- Navigation -->
     <nav>
-        <a href="index.html" alt="Homepage">Homepage</a> 
+        <a href="index.html" alt="Homepage">Home</a> 
         <a href="projects.html" alt="Projects">Projects</a>
     </nav>
     </header>
@@ -21,16 +22,18 @@
             <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Lorem ipsum odor amet, consectetuer adipiscing elit.</p>
         </section>
 
-        <div class="projects_card">
-            <div class="image"></div>
-            <h2>Appliance Repair</h2>
-            <p>This project is aimed at providing an entry-level access to building mechanical, electrical, plumbing, and HVAC skills. Those who join begin at an entry-level position with minimal training (enough to get started) performing simple repairs on simple devices and appliances and learn as they go. As they complete more repairs, they receive access to further education learning more complex and advanced repairs on more difficult to fix devices/appliances eventually leading to computational devices.</p>
-            <div class="icons">
-                <div class="icon">I1</div>
-                <div class="icon">I2</div>
-                <div class="icon">I3</div>
+        <div class="projects__card">
+            <div class="project__image"></div>
+            <h2 class="project__title">O(1) Landing Page</h2>
+            <p class="project__description">This project is aimed at providing direction for aspiring and experienced software engineers to get involved in projects that are making a difference. On this site, we'll share the projects we're working on and provide paths to get involved.</p>
+            <div class="project__bottom">
+                <div class="project__icons">
+                    <img class="project__icon" src="Images/Projects_Page/html.png" alt="html icon">
+                    <img class="project__icon" src="Images/Projects_Page/css.png" alt="css icon">
+                    <img class="project__icon" src="Images/Projects_Page/javascript.png" alt="javascript icon">
+                </div>
+                <button class="project__button">Join Project</button>
             </div>
-            <button>Join Project</button>
         </div>
 <footer>
     <span>Copyright 2025 By O(1) software Network</span>

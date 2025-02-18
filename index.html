@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>O(1) Landing Page</title>
-    <link rel="stylesheet" href="styles.css" />
+    <!-- external CSS links -->
+    <link rel="stylesheet" href="CSS/normalize.css">
+    <link rel="stylesheet" href="CSS/styles.css">
 
 </head>
 <body>
@@ -16,32 +18,27 @@
          </nav>
     </header>
     <main>
-        <section>
-            <!-- Hero -->
-            <h1>Lorem ipsum odor amet, consectetuer adipiscing elit.</h1>
-            <h3>Lorem ipsum odor amet, consectetuer adipiscing elit.</h3>
+        <section class="hero">
+            <h1 class="hero__header">Lorem ipsum odor amet, consectetuer adipiscing elit.</h1>
+            <h3 class="hero__subheader">Lorem ipsum odor amet, consectetuer adipiscing elit.</h3>
         </section>
-        <section>
-            <section>
-                <!-- Vision -->
-                <h2>Our Vision</h2>
-                <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Lorem ipsum odor amet, consectetuer adipiscing elit.</p>
-                <img src="" alt="">
+        <section class="org">
+            <section class="org__branding">
+                <h2 class="org__branding--header">Our Vision</h2>
+                <p class="org__branding--details">Lorem ipsum odor amet, consectetuer adipiscing elit. Lorem ipsum odor amet, consectetuer adipiscing elit. Lorem ipsum odor amet, consectetuer adipiscing elit. Lorem ipsum odor amet, consectetuer adipiscing elit. Lorem ipsum odor amet, consectetuer adipiscing elit. Lorem ipsum odor amet, consectetuer adipiscing elit. Lorem ipsum odor amet, consectetuer adipiscing elit. Lorem ipsum odor amet, consectetuer adipiscing elit.</p>
+                <img class="org__branding--image" src="" alt="">
             </section>
-            <section>
-                <!-- Mission -->
-                <h2>Our Mission</h2>
-                <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Lorem ipsum odor amet, consectetuer adipiscing elit.</p>
-                <img src="" alt="">
+            <section class="org__branding">
+                <h2 class="org__branding--header">Our Mission</h2>
+                <p class="org__branding--details">Lorem ipsum odor amet, consectetuer adipiscing elit. Lorem ipsum odor amet, consectetuer adipiscing elit. Lorem ipsum odor amet, consectetuer adipiscing elit. Lorem ipsum odor amet, consectetuer adipiscing elit. Lorem ipsum odor amet, consectetuer adipiscing elit. Lorem ipsum odor amet, consectetuer adipiscing elit. Lorem ipsum odor amet, consectetuer adipiscing elit. Lorem ipsum odor amet, consectetuer adipiscing elit.</p>
+                <img class="org__branding--image" src="" alt="">
             </section>
-            <section>
-                <!-- Values -->
-                <h2>Our Values</h2>
-                <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Lorem ipsum odor amet, consectetuer adipiscing elit.</p>
-                <img src="" alt="">
+            <section class="values org__branding">
+                <h2 class="org__branding--header">Our Values</h2>
+                <p class="org__branding--details">Lorem ipsum odor amet, consectetuer adipiscing elit. Lorem ipsum odor amet, consectetuer adipiscing elit. Lorem ipsum odor amet, consectetuer adipiscing elit. Lorem ipsum odor amet, consectetuer adipiscing elit. Lorem ipsum odor amet, consectetuer adipiscing elit. Lorem ipsum odor amet, consectetuer adipiscing elit. Lorem ipsum odor amet, consectetuer adipiscing elit. Lorem ipsum odor amet, consectetuer adipiscing elit.</p>
+                <img class="org__branding--image" src="" alt="">
             </section>
             <div>
-                <!-- CTA -->
                 <button type="button">CTA</button>
             </div>    
         </section>
@@ -69,10 +66,11 @@
     </main>
     <footer>
         <span>Copyright 2025 By O(1) Software Network</span>
-        <section>
+        <section class="contact">
             <a href="" alt="discord"> <img src="Images/Landing_Page/discord-mark-blue.svg" alt="Discord" /> </a>
-            <a href="" alt="meetup"> <img src="" alt="Meetup" /> </a>
+            <a href="" alt="meetup"> <img src="Images/Landing_Page/meetup.svg" alt="Meetup" /> </a>
         </section>
-    </footer>    
+    </footer>
+    <script type="text/javascript" src="js/main.js"></script>    
 </body>
 </html>
