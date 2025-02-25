@@ -1,120 +1,125 @@
-/************************************************************
-*************************** Shared **************************
-************************************************************/
 * {
     text-decoration: none;
     text-align: center;
 }
 
-nav {
-    padding-top: 50px;
-    padding-bottom: 50px;
-    font-family: Arial;
-    font-size: 45px;
-}
+@media screen and (min-width: 768px) {
+   
+    /************************************************************
+    *************************** Shared **************************
+    ************************************************************/
+    
 
-nav a {
-    color: black;
-    margin-right: 30px;
-}
+    nav {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        font-family: Arial;
+        font-size: 45px;
+    }
 
-/************************************************************
-************************** Home Page ************************
-************************************************************/
+    nav a {
+        color: black;
+        margin-right: 30px;
+    }
 
-.hero {
-    background-color: rgb(234, 233, 233);
-}
+    /************************************************************
+    ************************** Home Page ************************
+    ************************************************************/
 
-.org {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+    .hero {
+        background-color: rgb(234, 233, 233);
+    }
 
-.org__branding {
+    .org {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .org__branding {
+        font-family:Arial, Helvetica, sans-serif;
+        background-color: rgb(234, 233, 233);
+        width:70%;
+        padding: 20px;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: space-around;
+        vertical-align: middle;
+    }
+
+    .org__branding--header {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 40px;
+    }
+
+    .org__branding--details {
     font-family:Arial, Helvetica, sans-serif;
-    background-color: rgb(234, 233, 233);
-    width:70%;
-    padding: 20px;
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: space-around;
-    vertical-align: middle;
-}
+    font-size: 20px;
+    width: 70%
+    }
 
-.org__branding--header {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 40px;
-}
+    .org__branding--image {
+        background-color: black;
+        width: 100px;
+        height: 100px;
+    }
 
-.org__branding--details {
-   font-family:Arial, Helvetica, sans-serif;
-   font-size: 20px;
-   width: 70%
-}
+    .contact a img {
+        max-width: 5%;
+        max-height: 5%;
+    }
 
-.org__branding--image {
-    background-color: black;
-    width: 100px;
-    height: 100px;
-}
+    /************************************************************
+    ************************ Projects Page **********************
+    ************************************************************/
 
-.contact a img {
-    max-width: 5%;
-    max-height: 5%;
-}
+    .projects__card {
+        border: 1px solid black;
+        height: 400px;
+        width: 350px;
+        padding: 10px;
+        font-size: 12px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
 
+    .project__image {
+        width: 100%;
+        height: 150px;
+        background-color: gray;
+        border-radius: 10px;
+        font-size: 12px;
+        font-family:Arial, Helvetica, sans-serif;
+    }
 
-/************************************************************
-************************ Projects Page **********************
-************************************************************/
+    .project__title {
+        margin: 15px 0px 10px 0px ;
+        font-size: 2rem;
+    }
+    .project__description {
+        font-size: 0.9rem;
+    }
 
-.projects__card {
-    border: 1px solid black;
-    height: 400px;
-    width: 350px;
-    padding: 10px;
-    font-size: 12px;
-    font-family: Arial, Helvetica, sans-serif;
-}
+    .project__bottom {
+        display: flex;
+        justify-content: space-between;
+    }
 
-.project__image {
-    width: 100%;
-    height: 150px;
-    background-color: gray;
-    border-radius: 10px;
-    font-size: 12px;
-    font-family:Arial, Helvetica, sans-serif;
-}
+    .project__icons {
+        display: flex;
+    }
 
-.project__title {
-    margin: 15px 0px 10px 0px ;
-    font-size: 2rem;
-}
-.project__description {
-    font-size: 0.9rem;
-}
+    .project__icon {
+        margin-right: 5px;
+        padding: 5px;
+        width: 50px;
+        height: 50px;
+    }
 
-.project__bottom {
-    display: flex;
-    justify-content: space-between;
-}
+    .project__button {
+        border: 0;
+        font-size: 1rem;
+        height: 40px;
+        width: 120px;
+    }
 
-.project__icons {
-    display: flex;
-}
-
-.project__icon {
-    margin-right: 5px;
-    padding: 5px;
-    width: 50px;
-    height: 50px;
-}
-
-.project__button {
-    border: 0;
-    font-size: 1rem;
-    height: 40px;
-    width: 120px;
 }
