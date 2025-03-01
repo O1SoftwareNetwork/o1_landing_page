@@ -1,6 +1,21 @@
 * {
     text-decoration: none;
-    text-align: center;
+    font-family: arial;
+}
+
+.navigation {
+    background-color:lightgray;
+    padding: 20px;
+}
+
+.navigation__link {
+    margin-right: 15px;
+    font-size: 16px;
+    color:black;
+}
+
+.navigation__link:hover {
+    color:blue;
 }
 
 @media screen and (min-width: 768px) {
