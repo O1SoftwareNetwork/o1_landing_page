@@ -18,6 +18,27 @@
     color:blue;
 }
 
+.hero{
+    background-color: lightgray;
+
+}
+
+.hero__header {
+font-size:13px;
+margin-right:16px;
+font-family:arial;
+margin-left: 15px;
+
+}
+
+.hero__subheader {
+font-family:arial;
+font-size:13px;
+margin-left:15px;
+}
+
+
+
 
 @media screen and (min-width: 768px) {
    
