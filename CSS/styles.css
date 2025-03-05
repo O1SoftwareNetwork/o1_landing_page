@@ -12,11 +12,13 @@
     margin-right: 15px;
     font-size: 16px;
     color:black;
+    background-color: red;
 }
 
 .navigation__link:hover {
     color:blue;
 }
+
 
 .hero{
     background-color: lightgray;
@@ -37,6 +39,62 @@ margin-left:16px;
 }
 
 
+
+
+.testimonials {
+    margin-bottom: 20px
+}
+
+.testimonials__header {
+    text-align: center;
+    font-size: 2rem;
+    margin: 20px;
+}
+
+.testimonials__component {
+    display:flex;
+    margin: 0 auto;
+    width: 95%;
+}
+
+.testimonials__left-button {
+    margin: auto 10px auto auto;
+    border: 3px solid black;
+    padding: 15px 20px;
+    border-radius: 50%;
+    border-color: red;
+    background-color: rgb(255, 167, 167);
+}
+
+.testimonial {
+    border: 3px solid green;
+    background-color: rgb(201, 253, 201);
+}
+
+.testimonials__right-button {
+    margin: auto auto auto 10px;
+    border: 3px solid black;
+    padding: 15px 20px;
+    border-radius: 50%;
+    border-color: red;
+    background-color: rgb(255, 167, 167);
+}
+
+.testimonials__person-image {
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+.testimonials__person-name {
+    padding-top: 15px;
+    font-size: 1.1rem;
+}
+
+.testimonials__review {
+    font-size: 0.9rem;
+}
 
 
 @media screen and (min-width: 768px) {
