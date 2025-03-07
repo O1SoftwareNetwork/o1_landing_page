@@ -51,6 +51,28 @@
     color:blue;
 }
 
+
+.hero{
+    background-color: lightgray;
+
+}
+
+.hero__header {
+font-size:13px;
+font-family:arial;
+margin: 17px;
+padding:5px;
+}
+
+.hero__subheader {
+font-family:arial;
+font-size:13px;
+margin-left:16px;
+}
+
+
+
+
 .testimonials {
     margin-bottom: 20px
 }
@@ -105,6 +127,7 @@
 .testimonials__review {
     font-size: 0.9rem;
 }
+
 
 @media screen and (min-width: 768px) {
    
