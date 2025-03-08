@@ -1,8 +1,8 @@
 const testimonials = [
-    { testimonial_name: "John Doe", testimonial: "Great experience! Highly recommend!", testimonial_image: "testimonials__person-image"},
-    { testimonial_name: "Tiffany ", testimonial: "Lovely!", testimonial_image: "testimonials__person-image"},
-    { testimonial_name: "Brandon", testimonial: "Can't wait to come back", testimonial_image: "testimonials__person-image"}, 
-    { testimonial_name: "T", testimonial: "I really enjoyed the workshop!", testimonial_image: "testimonials__person-image"},
+    { testimonial_name: "John Doe", testimonial: "Great experience! Highly recommend!", testimonial_image: "Images/profiles/profile-1.png"},
+    { testimonial_name: "Tiffany ", testimonial: "Lovely!", testimonial_image: "Images/profiles/profile-2.png"},
+    { testimonial_name: "Brandon", testimonial: "Can't wait to come back", testimonial_image: "Images/profiles/profile-3.jpg"}, 
+    { testimonial_name: "T", testimonial: "I really enjoyed the workshop!", testimonial_image: "Images/profiles/profile-4.webp"},
 ];
 
 let index = 0;
