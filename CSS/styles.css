@@ -37,6 +37,8 @@
         margin-right: 30px;
     }
 
+   
+
     /************************************************************
     ************************** Home Page ************************
     ************************************************************/
@@ -83,6 +85,8 @@
         max-width: 5%;
         max-height: 5%;
     }
+
+
 
     /************************************************************
     ************************ Projects Page **********************
@@ -137,4 +141,38 @@
         width: 120px;
     }
 
+}
+
+/***********************************************************************
+*************************** Home Page Mobile ***************************
+***********************************************************************/
+@media screen and (max-width: 768px) {
+    .org__branding--header {
+        display: none;
+        visibility: hidden;;
+    }
+
+    .vision {
+        background-image: url();
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        text-size-adjust: 4em;
+    }
+
+    .mission {
+        background-image: url();
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        text-size-adjust: 4em;
+    }
+
+    .values {
+        background-image: url();
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        text-size-adjust: 4em;
+    }
 }
