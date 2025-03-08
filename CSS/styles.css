@@ -1,6 +1,8 @@
 * {
     text-decoration: none;
     font-family: arial;
+    margin: 0;
+    padding: 0;
 }
 
 .training {
@@ -51,27 +53,20 @@
     color:blue;
 }
 
-
-.hero{
+.hero {
     background-color: lightgray;
-
+    text-align: center;
 }
 
 .hero__header {
-font-size:13px;
-font-family:arial;
-margin: 17px;
-padding:5px;
+    font-size: 36px;
+    padding: 20px 5px 5px 5px;
 }
 
 .hero__subheader {
-font-family:arial;
-font-size:13px;
-margin-left:16px;
+    font-size:24px;
+    padding-bottom: 20px;
 }
-
-
-
 
 .testimonials {
     margin-bottom: 20px
