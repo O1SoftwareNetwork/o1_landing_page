@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>O(1) Landing Page</title>
     <!-- external CSS links -->
-    <link rel="stylesheet" href="CSS/normalize.css">
-    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -41,8 +41,7 @@
         </section>
         <section class="testimonials">
             <h2 class="testimonials__header">Testimonials</h2>
-            <!-- Testimonials -->
-             <div class="testimonials__component">
+            <div class="testimonials__component">
                 <div id="testimonial_left" class="testimonials__left-button"><</div>
                 <div class="testimonial">
                     <div class="testimonials__person">
@@ -54,23 +53,30 @@
                     <p id="testimonial_review" class="testimonials__review">This is a review from a member who found value in the organization's programs. I've landed a job, and I learned a lot from the hands-on projects and the interactive community.</p>
                 </div>
                 <div id="testimonial_right" class="testimonials__right-button">></div>
-             </div>
+            </div>
 
-             <div class="training">
-                <div class="left" id="left">
-                    <
+             <div class="card-container">
+                <div class="card-container__button" id="card-container__left-button">
+                    Previous
                 </div>
-                <div class="content">
-                    <p id="content">Content 1</p>
-                    <p id="review">Review 1</p>
-                    <img class="image" id="image" src="Images/Landing_Page/meetup.svg" />
+                <div class="card card-container__previous-card" id="previous-card">
+                    <!-- <h2>Jim Peterson</h2>
+                    <p>This is the review card created by Jim Peterson</p> -->
                 </div>
-                <div class="right" id="right">
-                    >
+                <div class="card card-container__current-card" id="current-card">
+                    <!-- <h2>Tiffany</h2>
+                    <p>This is the review card created by Tiffany</p> -->
+                </div>
+                <div class="card card-container__next-card" id="next-card">
+                    <!-- <h2>Brandon</h2>
+                    <p>This is the review card created by Brandon</p> -->
+                </div>
+                <div class="card-container__button" id="card-container__right-button">
+                    Next
                 </div>
              </div>
              
-             <!-- <div>
+            <!-- <div>
                 <span>last name</span><span>first name</span>
                 <p>Lorem ipsum odor amet, consectetuer adipiscing elit.</p>
                 <img href="" alt="person_image">
@@ -81,7 +87,7 @@
                 <p>Lorem ipsum odor amet, consectetuer adipiscing elit.</p>
                 <img href="" alt="person_image">
                 <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Porttitor sagittis luctus feugiat viverra sit cursus purus. Porttitor dictumst rhoncus pellentesque feugiat ultrices. Lobortis quisque condimentum accumsan auctor et ex cursus posuere. Mollis quisque ligula senectus, platea scelerisque cras justo elementum ridiculus. Ornare condimentum litora parturient volutpat finibus placerat potenti sapien faucibus. Interdum a dui interdum porttitor euismod dignissim. Per vulputate class consectetur ullamcorper consequat phasellus.</p>
-             </div> -->
+            </div> -->
         </section>
     </main>
     <footer>
