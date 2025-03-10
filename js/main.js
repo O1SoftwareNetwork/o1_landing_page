@@ -1,40 +1,48 @@
-// const testimonials = [
-//     { testimonial_name: "John Doe", testimonial: "Great experience! Highly recommend!", testimonial_image: "testimonials__person-image"},
-//     { testimonial_name: "Tiffany ", testimonial: "Lovely!", testimonial_image: "testimonials__person-image"},
-//     { testimonial_name: "Brandon", testimonial: "Can't wait to come back", testimonial_image: "testimonials__person-image"}, 
-//     { testimonial_name: "T", testimonial: "I really enjoyed the workshop!", testimonial_image: "testimonials__person-image"},
-// ];
+/**
+ * METHOD ONE METHOD ONE METHOD ONE METHOD ONE METHOD ONE METHOD ONE METHOD ONE METHOD ONE 
+ */
 
-// let index = 0;
+const testimonials = [
+    { testimonial_name: "John Doe", testimonial: "Great experience! Highly recommend!", testimonial_image: "testimonials__person-image"},
+    { testimonial_name: "Tiffany ", testimonial: "Lovely!", testimonial_image: "testimonials__person-image"},
+    { testimonial_name: "Brandon", testimonial: "Can't wait to come back", testimonial_image: "testimonials__person-image"}, 
+    { testimonial_name: "T", testimonial: "I really enjoyed the workshop!", testimonial_image: "testimonials__person-image"},
+];
 
-// const testimonialName = document.getElementById("testimonial_name");
-// const testimonialReview = document.getElementById("testimonial_review");
-// const srcImage = document.getElementById("testimonial_image");
+let index = 0;
 
-// const rightButtonTestimonial = document.getElementById("testimonial_right");
-// const leftButtonTestimonial = document.getElementById("testimonial_left");
+const testimonialName = document.getElementById("testimonial_name");
+const testimonialReview = document.getElementById("testimonial_review");
+const srcImage = document.getElementById("testimonial_image");
 
-// function updateTestimonial () {
-//     testimonialName.textContent = testimonials[index].testimonial_name;
-//     testimonialReview.textContent = testimonials[index].testimonial;
-//     srcImage.src = testimonials[index].testimonial_image;
-// }
+const rightButtonTestimonial = document.getElementById("testimonial_right");
+const leftButtonTestimonial = document.getElementById("testimonial_left");
 
-// rightButtonTestimonial.addEventListener("click", () => {
-//     index = (index + 1) % testimonials.length;
-//     updateTestimonial();
-// });
+function updateTestimonial () {
+    testimonialName.textContent = testimonials[index].testimonial_name;
+    testimonialReview.textContent = testimonials[index].testimonial;
+    srcImage.src = testimonials[index].testimonial_image;
+}
 
-// leftButtonTestimonial.addEventListener("click", () => {
-//     index = (index - 1 + testimonials.length) % testimonials.length;
-//     updateTestimonial();
-// });
+rightButtonTestimonial.addEventListener("click", () => {
+    index = (index + 1) % testimonials.length;
+    updateTestimonial();
+});
+
+leftButtonTestimonial.addEventListener("click", () => {
+    index = (index - 1 + testimonials.length) % testimonials.length;
+    updateTestimonial();
+});
+
+/**
+ * METHOD TWO METHOD TWO METHOD TWO METHOD TWO METHOD TWO METHOD TWO METHOD TWO METHOD TWO METHOD TWO METHOD TWO 
+ */
 
 const indexes = {
     current: 0,
     previous: null,
     next: null
-}
+} 
 
 const reviews = [
     {
