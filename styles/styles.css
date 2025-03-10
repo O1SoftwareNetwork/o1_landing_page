@@ -53,6 +53,8 @@
 * {
     text-decoration: none;
     font-family: arial;
+    margin: 0;
+    padding: 0;
 }
 
 .training {
@@ -100,6 +102,21 @@
 
 .navigation__link:hover {
     color:blue;
+}
+
+.hero {
+    background-color: lightgray;
+    text-align: center;
+}
+
+.hero__header {
+    font-size: 36px;
+    padding: 20px 5px 5px 5px;
+}
+
+.hero__subheader {
+    font-size:24px;
+    padding-bottom: 20px;
 }
 
 .testimonials {
@@ -157,6 +174,7 @@
     font-size: 0.9rem;
 }
 
+
 @media screen and (min-width: 768px) {
    
     /************************************************************
@@ -174,6 +192,8 @@
         color: black;
         margin-right: 30px;
     }
+
+   
 
     /************************************************************
     ************************** Home Page ************************
@@ -221,6 +241,8 @@
         max-width: 5%;
         max-height: 5%;
     }
+
+
 
     /************************************************************
     ************************ Projects Page **********************
@@ -275,4 +297,38 @@
         width: 120px;
     }
 
+}
+
+/***********************************************************************
+*************************** Home Page Mobile ***************************
+***********************************************************************/
+@media screen and (max-width: 768px) {
+    .org__branding--header {
+        display: none;
+        visibility: hidden;;
+    }
+
+    .vision {
+        background-image: url();
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        text-size-adjust: 4em;
+    }
+
+    .mission {
+        background-image: url();
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        text-size-adjust: 4em;
+    }
+
+    .values {
+        background-image: url();
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        text-size-adjust: 4em;
+    }
 }
