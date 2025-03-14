@@ -90,18 +90,46 @@
 }
 
 .navigation {
-    background-color:lightgray;
-    padding: 20px;
+    padding: 20px
 }
 
 .navigation__link {
-    margin-right: 15px;
-    font-size: 16px;
+    margin-right: 10px;
+    font-size: 1.2rem;
     color:black;
 }
 
 .navigation__link:hover {
-    color:blue;
+    color: blue;
+}
+
+.navigation2 {
+    padding: 5%;
+}
+
+.navigation__link2 {
+    margin-right: 10%;
+    font-size: 1em;
+    color:black;
+}
+
+.navigation__link2:hover {
+    color: blue;
+}
+
+.navigation3 {
+padding:20px;
+color:black;
+}
+
+.navigation3__link {
+    margin-right: 15px;
+    font-size: 2em;
+    color:purple;
+}
+
+.navigation3__link:hover {
+    color: blue;
 }
 
 .hero {
@@ -181,19 +209,69 @@
     *************************** Shared **************************
     ************************************************************/
     
-    nav {
-        padding-top: 50px;
-        padding-bottom: 50px;
-        font-family: Arial;
-        font-size: 45px;
+    .navigation {
+        padding: 40px 0;
     }
 
-    nav a {
+    .navigation__link-container {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .navigation__link {
         color: black;
-        margin-right: 30px;
+        font-weight: 700;
+        font-size: 2rem;
+        margin-right: 25px;
     }
 
-   
+    .navigation2 {
+        padding: 0 30px;
+        margin: 0 30px;
+        text-align: left;
+        margin-left: 250px;
+        font-size: 2rem;
+        word-spacing: 30px;
+    }
+
+    .navigation__link2 {
+        font-weight: 400;
+        color: black;
+        font-size: 2rem;
+    }
+
+    .navigation3 {
+           color: blue;
+           padding: 20px;
+           margin:auto;
+           margin-left: 270px;
+           font-family: sans-serif;
+           font-weight: normal;
+           text-align: center;
+    }
+
+    .navigation__link3 {
+        color:blueviolet;
+        font-size: 5rem;
+        margin-right: 30px;
+        font-weight:bold;
+        
+    }
+
+    .navigation4 {
+        
+        font-size: 2rem;
+       
+    }
+    .navigation_link-container4 {
+        width: 70%;
+        margin: 0 auto;
+    }
+    
+    .navigation__link4 {
+        font-weight: bold;
+        margin-left: 260px;
+    }
 
     /************************************************************
     ************************** Home Page ************************
