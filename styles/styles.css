@@ -103,35 +103,6 @@
     color: blue;
 }
 
-.navigation2 {
-    padding: 5%;
-}
-
-.navigation__link2 {
-    margin-right: 10%;
-    font-size: 1em;
-    color:black;
-}
-
-.navigation__link2:hover {
-    color: blue;
-}
-
-.navigation3 {
-padding:20px;
-color:black;
-}
-
-.navigation3__link {
-    margin-right: 15px;
-    font-size: 2em;
-    color:purple;
-}
-
-.navigation3__link:hover {
-    color: blue;
-}
-
 .hero {
     background-color: lightgray;
     text-align: center;
@@ -139,12 +110,11 @@ color:black;
 
 .hero__header {
     font-size: 36px;
-    padding: 20px 5px 5px 5px;
+    margin: 0;
 }
 
 .hero__subheader {
     font-size:24px;
-    padding-bottom: 20px;
 }
 
 .testimonials {
@@ -225,54 +195,6 @@ color:black;
         margin-right: 25px;
     }
 
-    .navigation2 {
-        padding: 0 30px;
-        margin: 0 30px;
-        text-align: left;
-        margin-left: 250px;
-        font-size: 2rem;
-        word-spacing: 30px;
-    }
-
-    .navigation__link2 {
-        font-weight: 400;
-        color: black;
-        font-size: 2rem;
-    }
-
-    .navigation3 {
-           color: blue;
-           padding: 20px;
-           margin:auto;
-           margin-left: 270px;
-           font-family: sans-serif;
-           font-weight: normal;
-           text-align: center;
-    }
-
-    .navigation__link3 {
-        color:blueviolet;
-        font-size: 5rem;
-        margin-right: 30px;
-        font-weight:bold;
-        
-    }
-
-    .navigation4 {
-        
-        font-size: 2rem;
-       
-    }
-    .navigation_link-container4 {
-        width: 70%;
-        margin: 0 auto;
-    }
-    
-    .navigation__link4 {
-        font-weight: bold;
-        margin-left: 260px;
-    }
-
     /************************************************************
     ************************** Home Page ************************
     ************************************************************/
@@ -319,8 +241,6 @@ color:black;
         max-width: 5%;
         max-height: 5%;
     }
-
-
 
     /************************************************************
     ************************ Projects Page **********************
