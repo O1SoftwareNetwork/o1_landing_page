@@ -1,54 +1,6 @@
-.card-container {
-    width: 80%;
-    height: 400px;
-    margin: 200px auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-}
-
-.card {
-    position: relative;
-    width: 600px;
-    height: 400px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    padding: 20px;
-    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
-}
-
-.card-container__previous-card {
-    transform: translateX(25%) scale(0.8);
-    opacity: 0.5;
-    z-index: 1;
-}
-
-.card-container__current-card {
-    transform: translateX(0) scale(1);
-    opacity: 1;
-    z-index: 2;
-}
-
-.card-container__next-card {
-    transform: translateX(-25%) scale(0.8);
-    opacity: 0.5;
-    z-index: 1;
-}
-
-.card-container__button {
-    color: black;
-    border: 1px solid black;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    margin: auto;
-    cursor: pointer;
-    z-index: 2;
-}
+/************************************************************************************************************************
+UNIVERSAL - UNIVERSAL - UNIVERSAL - UNIVERSAL - UNIVERSAL - UNIVERSAL - UNIVERSAL - UNIVERSAL - UNIVERSAL - UNIVERSAL - U
+************************************************************************************************************************/
 
 * {
     text-decoration: none;
@@ -57,37 +9,13 @@
     padding: 0;
 }
 
-.training {
-    border: 1px solid black;
-    height: 200px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
+/************************************************************************************************************************
+MOBILE - MOBILE - MOBILE - MOBILE - MOBILE - MOBILE - MOBILE - MOBILE - MOBILE - MOBILE - MOBILE - MOBILE - MOBILE - MOBI
+************************************************************************************************************************/
 
-.left {
-    border: 1px solid black;
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-}
-
-.content {
-    background-color: gray;
-    width: 50%;
-}
-
-.image {
-    width: 50px;
-    height: 50px;
-}
-
-.right {
-    border: 1px solid black;
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-}
+/************************************************************
+*************************** Shared **************************
+************************************************************/
 
 .navigation {
     padding: 20px
@@ -103,6 +31,10 @@
     color: blue;
 }
 
+/************************************************************
+**************************** hero ***************************
+************************************************************/
+
 .hero {
     background-color: lightgray;
     text-align: center;
@@ -116,6 +48,43 @@
 .hero__subheader {
     font-size:24px;
 }
+
+/************************************************************
+******************* organization branding *******************
+************************************************************/
+
+.org__branding--header {
+    display: none;
+    visibility: hidden;;
+}
+
+.vision {
+    background-image: url();
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-size-adjust: 4em;
+}
+
+.mission {
+    background-image: url();
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-size-adjust: 4em;
+}
+
+.values {
+    background-image: url();
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-size-adjust: 4em;
+}
+
+/************************************************************
+******************** testimonials slider ********************
+************************************************************/
 
 .testimonials {
     margin-bottom: 20px
@@ -172,12 +141,15 @@
     font-size: 0.9rem;
 }
 
+/************************************************************************************************************************
+DESKTOP - DESKTOP - DESKTOP - DESKTOP - DESKTOP - DESKTOP - DESKTOP - DESKTOP - DESKTOP - DESKTOP - DESKTOP - DESKTOP - D
+************************************************************************************************************************/
 
 @media screen and (min-width: 768px) {
    
-    /************************************************************
-    *************************** Shared **************************
-    ************************************************************/
+/************************************************************
+*************************** Shared **************************
+************************************************************/
     
     .navigation {
         padding: 40px 0;
@@ -195,13 +167,21 @@
         margin-right: 25px;
     }
 
-    /************************************************************
-    ************************** Home Page ************************
-    ************************************************************/
+/************************************************************
+HOME PAGE - HOME PAGE - HOME PAGE - HOME PAGE - HOME PAGE - H
+************************************************************/
+
+/************************************************************
+**************************** hero ***************************
+************************************************************/
 
     .hero {
         background-color: rgb(234, 233, 233);
     }
+
+/************************************************************
+******************** organization branding ******************
+************************************************************/
 
     .org {
         display: flex;
@@ -242,9 +222,65 @@
         max-height: 5%;
     }
 
-    /************************************************************
-    ************************ Projects Page **********************
-    ************************************************************/
+/************************************************************
+******************** testimonials carousel ******************
+************************************************************/
+
+    .card-container {
+        width: 80%;
+        height: 400px;
+        margin: 200px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .card {
+        position: relative;
+        width: 600px;
+        height: 400px;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        padding: 20px;
+        transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    }
+    
+    .card-container__previous-card {
+        transform: translateX(25%) scale(0.8);
+        opacity: 0.5;
+        z-index: 1;
+    }
+    
+    .card-container__current-card {
+        transform: translateX(0) scale(1);
+        opacity: 1;
+        z-index: 2;
+    }
+    
+    .card-container__next-card {
+        transform: translateX(-25%) scale(0.8);
+        opacity: 0.5;
+        z-index: 1;
+    }
+    
+    .card-container__button {
+        color: black;
+        border: 1px solid black;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        margin: auto;
+        cursor: pointer;
+        z-index: 2;
+    }
+
+/************************************************************
+PROJECTS PAGE - PROJECTS PAGE - PROJECTS PAGE - PROJECTS PAGE
+************************************************************/
 
     .projects__card {
         border: 1px solid black;
@@ -293,40 +329,5 @@
         font-size: 1rem;
         height: 40px;
         width: 120px;
-    }
-
-}
-
-/***********************************************************************
-*************************** Home Page Mobile ***************************
-***********************************************************************/
-@media screen and (max-width: 768px) {
-    .org__branding--header {
-        display: none;
-        visibility: hidden;;
-    }
-
-    .vision {
-        background-image: url();
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        text-size-adjust: 4em;
-    }
-
-    .mission {
-        background-image: url();
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        text-size-adjust: 4em;
-    }
-
-    .values {
-        background-image: url();
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        text-size-adjust: 4em;
     }
 }
