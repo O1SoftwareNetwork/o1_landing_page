@@ -39,6 +39,7 @@ MOBILE - MOBILE - MOBILE - MOBILE - MOBILE - MOBILE - MOBILE - MOBILE - MOBILE -
     background-color: lightgray;
     text-align: center;
     padding: 20px;
+    margin-bottom: 20px;
 }
 
 .hero__header {
@@ -61,9 +62,12 @@ MOBILE - MOBILE - MOBILE - MOBILE - MOBILE - MOBILE - MOBILE - MOBILE - MOBILE -
 ******************* organization branding *******************
 ************************************************************/
 
-.org__branding--header {
-    display: none;
-    visibility: hidden;;
+.org__branding {
+    border: 1px solid black;
+    width: 90%;
+    height: 160px;
+    margin: 0 auto 20px auto;
+    padding: 10px;
 }
 
 .vision {
@@ -243,38 +247,32 @@ HOME PAGE - HOME PAGE - HOME PAGE - HOME PAGE - HOME PAGE - H
 ******************** organization branding ******************
 ************************************************************/
 
-    .org {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+    
 
     .org__branding {
         font-family:Arial, Helvetica, sans-serif;
         background-color: rgb(234, 233, 233);
         width:70%;
-        padding: 20px;
         margin-bottom: 20px;
         display: flex;
         justify-content: space-around;
         vertical-align: middle;
     }
 
-    .org__branding--header {
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 40px;
+    .org__brading--header {
+        margin: auto;
     }
 
     .org__branding--details {
     font-family:Arial, Helvetica, sans-serif;
-    font-size: 20px;
+    font-size: 36px;
     width: 70%
     }
 
     .org__branding--image {
         background-color: black;
-        width: 100px;
-        height: 100px;
+        width: 160px;
+        height: 100%;
     }
 
     .contact a img {
