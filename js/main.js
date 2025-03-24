@@ -2,29 +2,90 @@
  * METHOD ONE METHOD ONE METHOD ONE METHOD ONE METHOD ONE METHOD ONE METHOD ONE METHOD ONE 
  * MOBILE MOBILE MOBILE MOBILE MOBILE MOBILE MOBILE MOBILE MOBILE MOBILE MOBILE MOBILE MOBILE 
  */
-
 class TestimonialSlider {
     constructor(testimonials) {
         this.testimonials = testimonials;
         this.index = 0;
 
-        this.testimonialName = document.getElementById("testimonial_name");
-        this.testimonialReview = document.getElementById("testimonial_review");
-        this.srcImage = document.getElementById("testimonial_image");
-        this.leftButton = document.getElementById("testimonial__left-button");
-        this.rightButton = document.getElementById("testimonial__right-button");
+        this.testimonialElement = document.getElementById("testimonial");
 
-        this.leftButton.addEventListener("click", () => this.prevTestimonial());
-        this.rightButton.addEventListener("click", () => this.nextTestimonial());
+        // Mobile
+        this.touchStartX = 0;
+
+        // Desktop
+        this.isDragging = false;
+        this.mouseStartX = 0;
+        
+        this.testimonialElement.addEventListener("touchstart", (event) => this.touchStart(event));
+        this.testimonialElement.addEventListener("touchend", (event) => this.touchEnd(event));
+
+        this.testimonialElement.addEventListener("mousedown", (event) => this.mouseStart(event));
+        this.testimonialElement.addEventListener("mousemove", (event) => this.mouseMove(event));
+        this.testimonialElement.addEventListener("mouseup", (event) => this.mouseEnd(event));
+        this.testimonialElement.addEventListener("mouseleave", (event) => this.mouseLeave(event));
     
         this.updateTestimonial();
     }
 
     updateTestimonial () {
         const currentTestimonial = this.testimonials[this.index];
-        this.testimonialName.textContent = currentTestimonial.testimonial_name;
-        this.testimonialReview.textContent = currentTestimonial.testimonial;
-        this.srcImage.src = currentTestimonial.testimonial_image;
+       
+        this.testimonialElement.innerHTML = `
+            <div class="testimonials__person">
+                <img id="testimonial_image" class="testimonials__person-image" src="${currentTestimonial.testimonial_image}" />
+                <div class="testimonials__person-name">
+                    <span id="testimonial_name">${currentTestimonial.testimonial_name}</span>
+                </div>
+            </div>
+            <p id="testimonial_review" class="testimonials__review">${currentTestimonial.review}"</p>
+        `;
+    }
+
+    touchStart(event) {
+       this.touchStartX = event.touches[0].clientX
+    }
+
+    touchEnd(event) {
+        const touchEndX = event.changedTouches[0].clientX
+        const touchDiff = this.touchStartX - touchEndX;
+
+        if (touchDiff > 50) {
+            this.nextTestimonial();
+        }
+        else if (touchDiff < 50) {
+            this.prevTestimonial();
+        }
+    }
+
+    mouseStart(event) {
+        this.isDragging = true;
+        this.mouseStartX = event.clientX;
+    }
+
+    mouseMove(event) {
+        if (this.isDragging) {
+            console.log(event.clientX);
+        }
+    }
+
+    mouseEnd(event) {
+        if (!this.isDragging) return;
+        const mouseEndX = event.clientX
+        const mouseDiff = this.mouseStartX - mouseEndX;
+        
+        if (Math.abs(mouseDiff) > 50) {
+            this.isDragging = false;
+            if (mouseDiff > 0) {
+                this.nextTestimonial();
+            }
+            else {
+                this.prevTestimonial();
+            }
+        }
+    }
+
+    mouseLeave() {
+        this.isDragging = false;
     }
 
     nextTestimonial() {
@@ -61,11 +122,9 @@ class TestimonialCarousel {
             next: null
         }
 
-        this.leftButton = document.getElementById("card-container__left-button");
-        this.rightButton = document.getElementById("card-container__right-button");
-        
-        this.leftButton.addEventListener("click", () => this.navigate("prev"));
-        this.rightButton.addEventListener("click", () => this.navigate("next"));
+        this.previousCard = document.getElementById("previous-card");
+        this.currentCard = document.getElementById("current-card");
+        this.nextCard = document.getElementById("next-card");
 
         this.render();
     }
@@ -78,13 +137,21 @@ class TestimonialCarousel {
 
     render() {
         this.updateIndexes(this.indexes.current);
-        this.renderCard(this.reviews[this.indexes.previous], "previous-card");
-        this.renderCard(this.reviews[this.indexes.current], "current-card");
-        this.renderCard(this.reviews[this.indexes.next], "next-card");
+        this.renderCard(this.reviews[this.indexes.previous], this.previousCard);
+        this.renderCard(this.reviews[this.indexes.current], this.currentCard);
+        this.renderCard(this.reviews[this.indexes.next], this.nextCard);
+
+        this.previousCard.replaceWith(this.previousCard.cloneNode(true));
+        this.nextCard.replaceWith(this.nextCard.cloneNode(true));
+
+        this.previousCard = document.getElementById("previous-card");
+        this.nextCard = document.getElementById("next-card");
+
+        this.previousCard.addEventListener("click", () => this.navigate("prev"));
+        this.nextCard.addEventListener("click", () => this.navigate("next"));
     }
 
-    renderCard(review, elementId) {
-        const element = document.getElementById(elementId);
+    renderCard(review, element) {
         element.innerHTML = "";
     
         const header = document.createElement("h2");
