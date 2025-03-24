@@ -2,15 +2,12 @@
  * METHOD ONE METHOD ONE METHOD ONE METHOD ONE METHOD ONE METHOD ONE METHOD ONE METHOD ONE 
  * MOBILE MOBILE MOBILE MOBILE MOBILE MOBILE MOBILE MOBILE MOBILE MOBILE MOBILE MOBILE MOBILE 
  */
-
-// Remove the buttons from the HTML Testimonial Slider
-
 class TestimonialSlider {
     constructor(testimonials) {
         this.testimonials = testimonials;
         this.index = 0;
 
-        this.testimonialElement = document.querySelector(".testimonial")
+        this.testimonialElement = document.getElementById("testimonial");
 
         // Mobile
         this.touchStartX = 0;
@@ -19,88 +16,72 @@ class TestimonialSlider {
         this.isDragging = false;
         this.mouseStartX = 0;
         
-        // Create the swipe event listeners
-        // Create two event listeners
-        // touchstart (event)
-        // touchStart (Execute the touchStart method and pass in the event)
         this.testimonialElement.addEventListener("touchstart", (event) => this.touchStart(event));
         this.testimonialElement.addEventListener("touchend", (event) => this.touchEnd(event));
 
-
-        // Create the swipe simulation event listeners
-        // Create four event listeners
-        // mousedown (event)
-            // Execute the mouseStart and pass in the event object
         this.testimonialElement.addEventListener("mousedown", (event) => this.mouseStart(event));
-        // mousemove (event)
-            // Execute the mouseMove method and pass in the event object
         this.testimonialElement.addEventListener("mousemove", (event) => this.mouseMove(event));
-        // mouseup (event)
-            // Execute the mouseEnd method and pass in the event object
         this.testimonialElement.addEventListener("mouseup", (event) => this.mouseEnd(event));
-        // mouseleave (event)
-            // Execute the mouseLeave method and pass in the event object
-        this.testimonialElement.addEventListener("mouseleave", (event) => this.mouseEnd(event));
+        this.testimonialElement.addEventListener("mouseleave", (event) => this.mouseLeave(event));
     
         this.updateTestimonial();
     }
 
     updateTestimonial () {
         const currentTestimonial = this.testimonials[this.index];
-        // Instead of setting the testimonial_name, testimonial, and testimonial_image individually
-        // we'll set the innerHTML of the testimonial element using a template literal and injecting
-        // JavaScript variables from the testimonial object
-        // (Remember to include the classes and ids)
-        this.testimonialName.textContent = currentTestimonial.testimonial_name;
-        this.testimonialReview.textContent = currentTestimonial.testimonial;
-        this.srcImage.src = currentTestimonial.testimonial_image;
+       
+        this.testimonialElement.innerHTML = `
+            <div class="testimonials__person">
+                <img id="testimonial_image" class="testimonials__person-image" src="${currentTestimonial.testimonial_image}" />
+                <div class="testimonials__person-name">
+                    <span id="testimonial_name">${currentTestimonial.testimonial_name}</span>
+                </div>
+            </div>
+            <p id="testimonial_review" class="testimonials__review">${currentTestimonial.review}"</p>
+        `;
     }
 
-    // Pass the event into the method
-    touchStart() {
-       // Set the variable using the event object 
+    touchStart(event) {
+       this.touchStartX = event.touches[0].clientX
     }
 
-    // Pass the event into the method
-    touchEnd() {
-        // Create a variable to determine where the finger was positioned when the touch ended
+    touchEnd(event) {
+        const touchEndX = event.changedTouches[0].clientX
+        const touchDiff = this.touchStartX - touchEndX;
 
-        // Create a variable to determine the difference between the starting and ending position
-
-        // Create a comnditional statement
-        // If the difference is greater than 50
-            // Next Testimonial
-        // If the difference is less than -50
-            // Previous Testimonial
+        if (touchDiff > 50) {
+            this.nextTestimonial();
+        }
+        else if (touchDiff < 50) {
+            this.prevTestimonial();
+        }
     }
 
-    // Pass the event into the method
-    mouseStart(tc) {
+    mouseStart(event) {
         this.isDragging = true;
-        // Set the starting position
-        this.mouseStartX = tc.clientX;
+        this.mouseStartX = event.clientX;
     }
 
-    // Pass the event into the method
-    mouseMove() {
-        // Log the position of the mouse to the console
+    mouseMove(event) {
+        if (this.isDragging) {
+            console.log(event.clientX);
+        }
     }
 
-    // Pass the event into the method
-    mouseEnd() {
-        // Check to see if the user is moving their mouse with dragging variable
-        // If it's false just return
-
-        // Create a variable to to store the position of the mouse when the user stopped clicking
-
-        // Create a variable finding the differenc between the start and end position
-
-        // If the difference is greater than 50 with Math absolute
-        // Set the dragging to false
-        // If the difference is greater than 0
-            // Next Testimonial
-        // If not
-            // Previous Testimonial
+    mouseEnd(event) {
+        if (!this.isDragging) return;
+        const mouseEndX = event.clientX
+        const mouseDiff = this.mouseStartX - mouseEndX;
+        
+        if (Math.abs(mouseDiff) > 50) {
+            this.isDragging = false;
+            if (mouseDiff > 0) {
+                this.nextTestimonial();
+            }
+            else {
+                this.prevTestimonial();
+            }
+        }
     }
 
     mouseLeave() {
