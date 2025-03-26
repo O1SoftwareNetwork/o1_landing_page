@@ -116,15 +116,8 @@ const testimonialSlider = new TestimonialSlider(testimonials);
 class TestimonialCarousel {
     constructor(reviews) {
         this.reviews = reviews;
-        this.indexes = {
-            current: 0,
-            previous: null,
-            next: null
-        }
-
-        this.previousCard = document.getElementById("previous-card");
-        this.currentCard = document.getElementById("current-card");
-        this.nextCard = document.getElementById("next-card");
+        this.indexes = { current: 0, previous: null, next: null };
+        this.testimonialContainer = document.getElementById("card-container");
 
         this.render();
     }
@@ -135,6 +128,8 @@ class TestimonialCarousel {
         this.indexes.next = (cur - 1 + reviews.length) % reviews.length; 
     }
 
+    // Set the container of ALL of the cards to empty
+    // CONTAINER => appendChild => this.createCard(DATA, className)
     render() {
         this.updateIndexes(this.indexes.current);
         this.renderCard(this.reviews[this.indexes.previous], this.previousCard);
@@ -151,23 +146,30 @@ class TestimonialCarousel {
         this.nextCard.addEventListener("click", () => this.navigate("next"));
     }
 
-    renderCard(review, element) {
-        element.innerHTML = "";
-    
+
+    createCard(review, className) {
+        const card = document.createElement("div");
+        card.className = `card card-container__${className}`;
+        card.id = className;
+
         const header = document.createElement("h2");
         const paragraph = document.createElement("p");
-    
+
         header.innerText = review.name;
         paragraph.innerText = review.review;
-    
-        element.appendChild(header);
-        element.appendChild(paragraph);
+
+        card.appendChild(header);
+        card.appendChild(paragraph);
+
+        card.addEventListener("click", this.handleClick(className));
+
+        return card;
     }
 
-    navigate(direction) {
-        if (direction === "prev") 
+    handleClick(direction) {
+        if (direction === "previous-card") 
             this.indexes.current = (this.indexes.current - 1 + this.reviews.length) % this.reviews.length;
-        else if (direction === "next")
+        else if (direction === "next-card")
             this.indexes.current = (this.indexes.current + 1) % this.reviews.length; 
 
         this.render();
