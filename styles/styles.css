@@ -443,6 +443,16 @@ GET INVOLVED PAGE - GET INVOLVED PAGE - GET INVOLVED PAGE - G
     .get-involved__main-section {
         width: 60%;
         margin: 0 auto;
+        display: flex;
+    }
+
+    .get-involved__nav {
+        margin-right: 50px;
+        min-width: 300px;
+    }
+
+    .get-involved__section {
+        
     }
 
     .get-involved__header-1 {
