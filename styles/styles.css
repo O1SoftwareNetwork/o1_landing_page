@@ -449,6 +449,12 @@ GET INVOLVED PAGE - GET INVOLVED PAGE - GET INVOLVED PAGE - G
     .get-involved__nav {
         margin-right: 50px;
         min-width: 300px;
+        max-width: 300px;
+    }
+
+    aside h3 {
+        color: gray;
+        margin: 10px 0;
     }
 
     .get-involved__section {
