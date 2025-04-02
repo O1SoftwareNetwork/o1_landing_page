@@ -128,24 +128,15 @@ class TestimonialCarousel {
         this.indexes.next = (cur - 1 + reviews.length) % reviews.length; 
     }
 
-    // Set the container of ALL of the cards to empty
-    // CONTAINER => appendChild => this.createCard(DATA, className)
     render() {
         this.updateIndexes(this.indexes.current);
-        this.renderCard(this.reviews[this.indexes.previous], this.previousCard);
-        this.renderCard(this.reviews[this.indexes.current], this.currentCard);
-        this.renderCard(this.reviews[this.indexes.next], this.nextCard);
 
-        this.previousCard.replaceWith(this.previousCard.cloneNode(true));
-        this.nextCard.replaceWith(this.nextCard.cloneNode(true));
-
-        this.previousCard = document.getElementById("previous-card");
-        this.nextCard = document.getElementById("next-card");
-
-        this.previousCard.addEventListener("click", () => this.navigate("prev"));
-        this.nextCard.addEventListener("click", () => this.navigate("next"));
+        this.testimonialContainer.innerHTML = "";
+        
+        this.testimonialContainer.appendChild(this.createCard(this.reviews[this.indexes.previous], "previous-card"));
+        this.testimonialContainer.appendChild(this.createCard(this.reviews[this.indexes.current], "current-card"));
+        this.testimonialContainer.appendChild(this.createCard(this.reviews[this.indexes.next], "next-card"));
     }
-
 
     createCard(review, className) {
         const card = document.createElement("div");
@@ -161,17 +152,18 @@ class TestimonialCarousel {
         card.appendChild(header);
         card.appendChild(paragraph);
 
-        card.addEventListener("click", this.handleClick(className));
+        card.addEventListener("click", () => this.handleClick(className));
 
         return card;
     }
 
     handleClick(direction) {
-        if (direction === "previous-card") 
-            this.indexes.current = (this.indexes.current - 1 + this.reviews.length) % this.reviews.length;
-        else if (direction === "next-card")
-            this.indexes.current = (this.indexes.current + 1) % this.reviews.length; 
-
+        if (direction === "previous-card") {
+            this.indexes.current = (this.indexes.current - 1 + reviews.length) % reviews.length;
+        } else if (direction === "next-card") {
+            this.indexes.current = (this.indexes.current + 1) % reviews.length; 
+        }
+        
         this.render();
     }
 }
