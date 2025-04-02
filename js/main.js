@@ -116,15 +116,8 @@ const testimonialSlider = new TestimonialSlider(testimonials);
 class TestimonialCarousel {
     constructor(reviews) {
         this.reviews = reviews;
-        this.indexes = {
-            current: 0,
-            previous: null,
-            next: null
-        }
-
-        this.previousCard = document.getElementById("previous-card");
-        this.currentCard = document.getElementById("current-card");
-        this.nextCard = document.getElementById("next-card");
+        this.indexes = { current: 0, previous: null, next: null };
+        this.testimonialContainer = document.getElementById("card-container");
 
         this.render();
     }
@@ -137,39 +130,40 @@ class TestimonialCarousel {
 
     render() {
         this.updateIndexes(this.indexes.current);
-        this.renderCard(this.reviews[this.indexes.previous], this.previousCard);
-        this.renderCard(this.reviews[this.indexes.current], this.currentCard);
-        this.renderCard(this.reviews[this.indexes.next], this.nextCard);
 
-        this.previousCard.replaceWith(this.previousCard.cloneNode(true));
-        this.nextCard.replaceWith(this.nextCard.cloneNode(true));
-
-        this.previousCard = document.getElementById("previous-card");
-        this.nextCard = document.getElementById("next-card");
-
-        this.previousCard.addEventListener("click", () => this.navigate("prev"));
-        this.nextCard.addEventListener("click", () => this.navigate("next"));
+        this.testimonialContainer.innerHTML = "";
+        
+        this.testimonialContainer.appendChild(this.createCard(this.reviews[this.indexes.previous], "previous-card"));
+        this.testimonialContainer.appendChild(this.createCard(this.reviews[this.indexes.current], "current-card"));
+        this.testimonialContainer.appendChild(this.createCard(this.reviews[this.indexes.next], "next-card"));
     }
 
-    renderCard(review, element) {
-        element.innerHTML = "";
-    
+    createCard(review, className) {
+        const card = document.createElement("div");
+        card.className = `card card-container__${className}`;
+        card.id = className;
+
         const header = document.createElement("h2");
         const paragraph = document.createElement("p");
-    
+
         header.innerText = review.name;
         paragraph.innerText = review.review;
-    
-        element.appendChild(header);
-        element.appendChild(paragraph);
+
+        card.appendChild(header);
+        card.appendChild(paragraph);
+
+        card.addEventListener("click", () => this.handleClick(className));
+
+        return card;
     }
 
-    navigate(direction) {
-        if (direction === "prev") 
-            this.indexes.current = (this.indexes.current - 1 + this.reviews.length) % this.reviews.length;
-        else if (direction === "next")
-            this.indexes.current = (this.indexes.current + 1) % this.reviews.length; 
-
+    handleClick(direction) {
+        if (direction === "previous-card") {
+            this.indexes.current = (this.indexes.current - 1 + reviews.length) % reviews.length;
+        } else if (direction === "next-card") {
+            this.indexes.current = (this.indexes.current + 1) % reviews.length; 
+        }
+        
         this.render();
     }
 }
