@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Version Control with Git Best Practices (Branching Strategy, PR Reviews, Code Reviews)</title>
+</head>
+<body>
+    <h1>Version Control with Git Best Practices (Branching Strategy, PR Reviews, Code Reviews)</h1>
+    <p>Version Control with Git Best Practices (Branching Strategy, PR Reviews, Code Reviews) means using Git (a distributed version control system) intelligently and systematically to manage your source code in a way that enables:</p>
+    <ul>
+        <li>Collaboration</li>
+        <li>Code safety and traceability</li>
+        <li>Continuous integration</li>
+        <li>Faster, smoother releases</li>
+        <li>Fewer bugs and regressions</li>
+    </ul>
+    <h2>Version Control Basics</h2>
+    <p>Git lets you:</p>
+    <ul>
+        <li><b>Track changes</b> to your codebase over time</li>
+        <li><b>Revert</b> back to previous versions if bugs are introduced</li>
+        <li><b>Collaborate</b> safely with multiple developers without overwriting each other’s work</li>
+        <li><b>Work in branches</b>, meaning each person or feature can evolve independently until it’s ready</li>
+    </ul>
+    <h2>Git Best Practices Include:</h2>
+    <h3>Branching Strategy</h3>
+    <p>This is a structured way to create and name branches so your team can collaborate efficiently.</p>
+    <h3>Typical branching strategy:</h3>
+    <!-- Branching Strategy -->
+     <p>Key Best Practices:</p>
+     <ul>
+        <li>Never commit directly to main or develop</li>
+        <li>Create feature branches from develop</li>
+        <li>Create hotfix branches from main if needed urgently in production</li>
+        <li>Use meaningful names: feature/signup-form, bugfix/reset-password-error</li>
+     </ul>
+     <h3>Pull Request (PR) Reviews</h3>
+     <p>A Pull Request is how developers propose changes to the main codebase.</p>
+     <p>When you open a PR, your teammates can:</p>
+     <ul>
+        <li>Review your code</li>
+        <li>Leave comments</li>
+        <li>Suggest improvements</li>
+        <li>Approve changes once they’re verified</li>
+     </ul>
+     <h4>Why PRs are Important:</h4>
+     <ul>
+        <li>They create a formal process of review, ensuring code meets standards</li>
+        <li>Help share knowledge across team members</li>
+        <li>Catch bugs, security issues, and logic errors early</li>
+        <li>Provide context and traceability for changes</li>
+     </ul>
+     <h3>Code Reviews (Manual or Automated)</h3>
+     <p>Code reviews are team-level quality gates. These are mandatory processes in most corporate settings.</p>
+     <h4>Best Practices for Code Reviews:</h4>
+     <ul>
+        <li>Enforce 2 reviewers per PR rule</li>
+        <li>Use tools like GitHub, GitLab, Bitbucket to host the PR</li>
+        <li>Automate linting and tests (via GitHub Actions, for example)</li>
+        <li>Check for:</li>
+        <ul>
+            <li>SOLID principle compliance</li>
+            <li>DRY/KISS best practices</li>
+            <li>Proper error handling</li>
+            <li>Security red flags (like unsanitized user input)</li>
+        </ul>
+     </ul>
+     <h2>Example Workflow: Putting It All Together</h2>
+     <ol>
+        <li>Create a branch:</li>
+        <p>git checkout -b feature/login-page</p>
+        <li>Make commits with clear messages:</li>
+        <p>git commit -m "feat: add login form with validation"</p>
+        <li>Push to remote:</li>
+        <p>git push origin feature/login-page</p>
+        <li>Open a Pull Request to develop</li>
+        <ul>
+            <li>Assign reviewers</li>
+            <li>Get feedback, make changes</li>
+            <li>Review passes, tests pass</li>
+        </ul>
+        <li>Merge to develop, then eventually into main for release</li>
+        <li>CI/CD automatically deploys the update</li>
+     </ol>
+     <h2>Git Practices and Their Impact</h2>
+     <table>
+        <tr>
+            <th>Practice</th>
+            <th>Impact</th>
+            <th>Organization-Wide or Per-Project</th>
+        </tr>
+        <tr>
+            <th>Branching Strategy</th>
+            <td>Prevents chaos, encourages parallel development</td>
+            <td>Organization-Wide (standard policy)</td>
+        </tr>
+        <tr>
+            <th>Pull-Request Reviews</th>
+            <td>Improves code quality and knowledge sharing</td>
+            <td>Organization-Wide</td>
+        </tr>
+        <tr>
+            <th>Code Reviews</th>
+            <td>Enforces standards and catches bugs early</td>
+            <td>Organization-Wide (can vary slightly per project)</td>
+        </tr>
+        <tr>
+            <th>Commit Message Standards</th>
+            <td>Improves history readability and automation</td>
+            <td>Organization-Wide</td>
+        </tr>
+    </table>
+</body>
+</html>
