@@ -144,12 +144,15 @@ class TestimonialCarousel {
         card.id = className;
 
         const header = document.createElement("h2");
+        const subHeader = document.createElement("h3");
         const paragraph = document.createElement("p");
 
         header.innerText = review.name;
+        subHeader.innerText = review.title;
         paragraph.innerText = review.review;
 
         card.appendChild(header);
+        card.appendChild(subHeader);
         card.appendChild(paragraph);
 
         card.addEventListener("click", () => this.handleClick(className));
@@ -171,22 +174,27 @@ class TestimonialCarousel {
 const reviews = [
     {
         name: "Jim Peterson",
+        title: "This is title of review.",
         review: "This is the review card created by Jim Peterson"
     },
     {
         name: "Brandon",
+        title: "This is title of review.",
         review: "This is the review card created by Brandon"
     },
     {
         name: "Tiffany",
+        title: "This is title of review.",
         review: "This is the review card created by Tiffany"
     },
     {
         name: "Tee",
+        title: "This is title of review.",
         review: "This is the review card created by Tee"
     },
     {
         name: "Jean",
+        title: "This is title of review.",
         review: "This is the review card created by Jean"
     }
 ];

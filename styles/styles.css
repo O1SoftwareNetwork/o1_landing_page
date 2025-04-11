@@ -7,30 +7,35 @@ UNIVERSAL - UNIVERSAL - UNIVERSAL - UNIVERSAL - UNIVERSAL - UNIVERSAL - UNIVERSA
     font-family: arial;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 /************************************************************************************************************************
 MOBILE - MOBILE - MOBILE - MOBILE - MOBILE - MOBILE - MOBILE - MOBILE - MOBILE - MOBILE - MOBILE - MOBILE - MOBILE - MOBI
 ************************************************************************************************************************/
 
+@media screen and (max-width: 768px) {
+    .mobile-hide {
+        display: none;
+    }
+
 /************************************************************
 *************************** Shared **************************
 ************************************************************/
 
-.navigation {
-    padding: 20px
-}
+    .navigation {
+        padding: 20px
+    }
 
-.navigation__link {
-    margin-right: 10px;
-    font-size: 1.2rem;
-    color:black;
-}
+    .navigation__link {
+        margin-right: 10px;
+        font-size: 1.2rem;
+        color:black;
+    }
 
-.navigation__link:hover {
-    color: blue;
-}
-
+    .navigation__link:hover {
+        color: blue;
+    }
 /************************************************************
 **************************** hero ***************************
 ************************************************************/
@@ -61,106 +66,114 @@ MOBILE - MOBILE - MOBILE - MOBILE - MOBILE - MOBILE - MOBILE - MOBILE - MOBILE -
 ******************* organization branding *******************
 ************************************************************/
 
-.org__branding {
-    background-color: rgb(234, 233, 233);
-    width: 90%;
-    height: 160px;
-    margin: 0 auto 20px auto;
-    padding: 10px;
-}
+    .org__branding {
+        background-color:  rgb(16, 36, 50);
+        color: #fefefc;
+        width: 90%;
+        height: 160px;
+        margin: 0 auto 20px auto;
+        padding: 10px;
+    }
 
-.vision {
-    background-image: url();
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    text-size-adjust: 4em;
-}
+    .vision {
+        background-image: url();
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        text-size-adjust: 4em;
+    }
 
-.mission {
-    background-image: url();
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    text-size-adjust: 4em;
-}
+    .mission {
+        background-image: url();
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        text-size-adjust: 4em;
+    }
 
-.values {
-    background-image: url();
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    text-size-adjust: 4em;
-}
+    .values {
+        background-image: url();
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        text-size-adjust: 4em;
+    }
 
 /************************************************************
 ******************** testimonials slider ********************
 ************************************************************/
 
-.testimonials {
-    margin-bottom: 20px
-}
+    .testimonials {
+        margin-bottom: 20px
+        
+    }
 
-.testimonials__header {
-    text-align: center;
-    font-size: 2rem;
-    margin: 20px;
-}
+    .testimonials__slider__header {
+        text-align: center;
+        font-size: 2rem;
+        margin: 20px;
+    }
 
-.testimonials__component {
-    display: flex;
-    margin: 0 auto;
-    width: 95%;
-}
+    .testimonials__component {
 
-.testimonials__left-button {
-    margin: auto 10px auto auto;
-    border: 3px solid black;
-    padding: 15px 20px;
-    border-radius: 50%;
-    border-color: red;
-    background-color: rgb(255, 167, 167);
-}
+        /*
+        margin: 0 auto 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        overflow: hidden; 
+        */
+        margin: 0 auto;
+        display: flex;
+        
+        width: 95%;
+    }
 
-@media screen and (max-width: 480px) {
-    .testimonial {
-    border: 3px solid green;
-    background-color: rgb(201, 253, 201);
-}
-}
+    .testimonials__left-button {
+        margin: auto 10px auto auto;
+        border: 3px solid black;
+        padding: 15px 20px;
+        border-radius: 50%;
+        border-color: red;
+        background-color: rgb(255, 167, 167);
+    }
 
+    .testimonials__right-button {
+        margin: auto auto auto 10px;
+        border: 3px solid black;
+        padding: 15px 20px;
+        border-radius: 50%;
+        border-color: red;
+        background-color: rgb(255, 167, 167);
+    }
 
-.testimonials__right-button {
-    margin: auto auto auto 10px;
-    border: 3px solid black;
-    padding: 15px 20px;
-    border-radius: 50%;
-    border-color: red;
-    background-color: rgb(255, 167, 167);
+    .testimonials__person-image {
+        height: 100px;
+        width: 100px;
+        border: 1px solid black;
+        border-radius: 50%;
+    }
+
+    .testimonials__person-name {
+        padding-top: 15px;
+        font-size: 1.1rem;
+    }
+
+    .testimonials__review {
+        font-size: 0.9rem;
+    }
+
 }
-
-.testimonials__person-image {
-    height: 100px;
-    width: 100px;
-    border: 1px solid black;
-    border-radius: 50%;
-}
-
-.testimonials__person-name {
-    padding-top: 15px;
-    font-size: 1.1rem;
-}
-
-.testimonials__review {
-    font-size: 0.9rem;
-}
-
 /************************************************************************************************************************
 DESKTOP - DESKTOP - DESKTOP - DESKTOP - DESKTOP - DESKTOP - DESKTOP - DESKTOP - DESKTOP - DESKTOP - DESKTOP - DESKTOP - D
 ************************************************************************************************************************/
 
 @media screen and (min-width: 768px) {
-   
+    .desktop-hide {
+        display: none;
+    }
+    
 /************************************************************
 *************************** Shared **************************
 ************************************************************/
@@ -199,24 +212,19 @@ HOME PAGE - HOME PAGE - HOME PAGE - HOME PAGE - HOME PAGE - H
         font-size: 72px;
         line-height: normal;
         letter-spacing: 5px;
-        
+        text-align: center;
     }
 
     .hero__subheader {
         font-size: 48px;
         line-height: normal;
+        text-align: center;
+        margin-bottom: 50px;
     }
 
 /************************************************************
 ******************** organization branding ******************
 ************************************************************/
-
-
-
-
-/* TO DO: 
-- even padding top 
-*/
 
     .org__branding {
         font-family:Arial, Helvetica, sans-serif;
@@ -225,11 +233,6 @@ HOME PAGE - HOME PAGE - HOME PAGE - HOME PAGE - HOME PAGE - H
         width: 100%;
         display: flex;
         justify-content: space-around;
-        /* padding-top: 56px;
-        padding-bottom: 76px;
-        padding-right: 88px;
-        padding-left: 90px; */
-        /* padding: 50px 88px 50px 88px; */
         padding: 100px 0;
     }
 
@@ -256,8 +259,11 @@ HOME PAGE - HOME PAGE - HOME PAGE - HOME PAGE - HOME PAGE - H
 /************************************************************
 ******************** testimonials carousel ******************
 ************************************************************/
-    .testimonials__header {
-        margin-top: 600px;
+
+    .testimonials__carousel__header {
+        text-align: center;
+        margin-top: 50px;
+        margin-bottom: 50px;
         font-size: 3rem;
     }
 
@@ -265,12 +271,12 @@ HOME PAGE - HOME PAGE - HOME PAGE - HOME PAGE - HOME PAGE - H
     .card-container {
         width: 80%;
         height: 400px;
-        margin: 200px auto;
+        margin: 0 auto 50px;
         display: flex;
         justify-content: center;
         align-items: center;
         position: relative;
-        overflow: hidden;   
+        overflow: hidden; 
     }
     
     .card {
@@ -282,26 +288,25 @@ HOME PAGE - HOME PAGE - HOME PAGE - HOME PAGE - HOME PAGE - H
         box-shadow: 0px 4px 20px 3px rgba(0, 0, 0, 0.1);
         text-align: center;
         color: #fefefc;
-        padding: 20px;
+        padding: 20px;  
         transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
-        
     }
     
     .card-container__previous-card {
         transform: translateX(25%) scale(0.8);
-        opacity: 0.5;
+        opacity: 0.8;
         z-index: 1;
     }
     
     .card-container__current-card {
-        transform: translateX(0) scale(1);
+        transform: translateX(0), scale(1);
         opacity: 1;
         z-index: 2;
     }
     
     .card-container__next-card {
         transform: translateX(-25%) scale(0.8);
-        opacity: 0.5;
+        opacity: 0.8;
         z-index: 1;
     }
     
@@ -365,6 +370,7 @@ PROJECTS PAGE - PROJECTS PAGE - PROJECTS PAGE - PROJECTS PAGE
         border-radius: 15px;
         display: flex;
         flex-direction: column;
+        cursor:pointer;
     }
 
     .project__image {
@@ -380,9 +386,11 @@ PROJECTS PAGE - PROJECTS PAGE - PROJECTS PAGE - PROJECTS PAGE
     .project__title {
         margin: 15px 0px 10px 0px ;
         font-size: 2rem;
+        /* flex-grow: 1; */
     }
     .project__description {
         font-size: 1.1rem;
+        flex-grow: 1;
     }
 
     .project__bottom {
