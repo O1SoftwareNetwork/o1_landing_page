@@ -29,7 +29,6 @@ class TestimonialSlider {
 
     updateTestimonial () {
         const currentTestimonial = this.testimonials[this.index];
-       
         this.testimonialElement.innerHTML = `
             <div class="testimonials__component">
                 <div class="testimonials__person-name">
