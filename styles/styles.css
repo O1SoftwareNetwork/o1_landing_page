@@ -7,44 +7,51 @@ UNIVERSAL - UNIVERSAL - UNIVERSAL - UNIVERSAL - UNIVERSAL - UNIVERSAL - UNIVERSA
     font-family: arial;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 /************************************************************************************************************************
 MOBILE - MOBILE - MOBILE - MOBILE - MOBILE - MOBILE - MOBILE - MOBILE - MOBILE - MOBILE - MOBILE - MOBILE - MOBILE - MOBI
 ************************************************************************************************************************/
 
+@media screen and (max-width: 768px) {
+    .mobile-hide {
+        display: none;
+    }
+
 /************************************************************
 *************************** Shared **************************
 ************************************************************/
 
-.navigation {
-    padding: 20px
-}
+    .navigation {
+        margin-bottom: 1.5px;
+        padding: 20px;
+        background-color: rgb(16, 36, 50);
+    }
 
-.navigation__link {
-    margin-right: 10px;
-    font-size: 1.2rem;
-    color:black;
-}
+    .navigation__link {
+        margin-right: 10px;
+        color:#fefefc;
+    }
 
-.navigation__link:hover {
-    color: blue;
-}
-
+    .navigation__link:hover {
+        color: #e6bc5c;
+    }
 /************************************************************
 **************************** hero ***************************
 ************************************************************/
 
 .hero {
-    background-color: lightgray;
     text-align: center;
     padding: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
+    background-color: rgb(16, 36, 50);
+    color:#fefefc;
 }
 
 .hero__header {
     margin: 0;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
     font-size: 24px;
     font-weight: 400;
     line-height: 30px;
@@ -62,118 +69,221 @@ MOBILE - MOBILE - MOBILE - MOBILE - MOBILE - MOBILE - MOBILE - MOBILE - MOBILE -
 ******************* organization branding *******************
 ************************************************************/
 
-.org__branding {
-    background-color: rgb(234, 233, 233);
-    width: 90%;
-    height: 160px;
-    margin: 0 auto 20px auto;
-    padding: 10px;
-}
+    .org__branding {
+        background-color:  rgb(16, 36, 50);
+        color: #fefefc;
+        text-align: center;
+        width: 100%;
+        height: 160px;
+        margin: auto;
+        padding: 10px;
+    }
 
-.vision {
-    background-image: url();
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    text-size-adjust: 4em;
-}
+    .vision {
+        background-image: url();
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        text-size-adjust: 4em;
+    }
 
-.mission {
-    background-image: url();
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    text-size-adjust: 4em;
-}
+    .mission {
+        background-color: #fefefc;
+        color: rgb(16, 36, 50);
+        background-image: url();
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        text-size-adjust: 4em;
+    }
 
-.values {
-    background-image: url();
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    text-size-adjust: 4em;
-}
+    .values {
+        background-image: url();
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        text-size-adjust: 4em;
+    }
 
 /************************************************************
 ******************** testimonials slider ********************
 ************************************************************/
+    
+    .testimonials {
+        margin-top: 75px; 
+        width: 100%;
+    }
 
-.testimonials {
-    margin-bottom: 20px
+    .testimonial {
+        margin: auto;
+        width: 225px;
+        height: 225px;
+    }
+
+    .testimonials__slider__header {
+        text-align: center;
+        background-color: #fefefc;
+        color:  rgb(16, 36, 50);
+        font-size: 2rem;
+        margin-bottom: 5px;
+    }
+
+    .testimonials__component {
+        padding-top: 20px;
+        background-color: rgb(16, 36, 50);
+        color: #fefefc;
+        margin: 0 auto;
+        display: flex;
+    }
+
+    .testimonials__left-button {
+        margin: auto 10px auto auto;
+        border: 3px solid black;
+        padding: 15px 20px;
+        border-radius: 50%;
+        border-color: red;
+        background-color: rgb(255, 167, 167);
+    }
+
+    .testimonials__right-button {
+        margin: auto auto auto 10px;
+        border: 3px solid black;
+        padding: 15px 20px;
+        border-radius: 50%;
+        border-color: red;
+        background-color: rgb(255, 167, 167);
+    }
+
+    .testimonials__person-name {
+        padding-top: 15px;
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+    }
+
+    .testimonials__review {
+        background-color: rgb(16, 36, 50);
+        color: #fefefc;
+        font-size: 0.9rem;
+    }
+
+/************************************************************
+********************** projects cards ***********************
+************************************************************/
+    .projects__header {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .projects__banner {
+        background-color: #102432;
+        /* padding: 50px 0; */
+    }
+
+    .projects__banner-text {
+        color: #fefefc;
+        font-size: 12px;
+        font-weight: lighter;
+        /* letter-spacing: 0.3rem; */
+        line-height: 2.5rem;
+        text-align: center;
+    }
+
+
+    .projects__cards-container {
+        /* width: 60%; */
+        margin: 60px auto;
+        /* display: grid; */
+        /* grid-template-columns: repeat(3, 1fr); */
+        /* gap: 2rem; */
+    }
+
+    .projects__card {
+        background-color: #fefdfb;
+        height: 460px;
+        width: 90%;
+        margin: 30px auto;
+        padding: 15px;
+        font-size: 8px;
+        font-family: Arial, Helvetica, sans-serif;
+        box-shadow: 0 4px 10px 3px #c3c6c1;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        cursor:pointer;
+    }
+
+    .project__image {
+        width: 100%;
+        height: 150px;
+        background-color: #838177;
+        border-radius: 10px;
+        font-size: 12px;
+        font-family:Arial, Helvetica, sans-serif;
+        object-fit: fill;
+    }
+
+    .project__title {
+        margin: 15px 0px 10px 0px ;
+        font-size: 1.75rem;
+        /* flex-grow: 1; */
+    }
+    .project__description {
+        font-size: 1.1rem;
+        flex-grow: 1;
+    }
+
+    .project__bottom {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .project__icons {
+        display: flex;
+    }
+
+    .project__icon {
+        margin-right: 5px;
+        padding: 5px;
+        width: 45px;
+        height: 45px;
+    }
+
+    .project__button {
+        border: 0;
+        font-size: 1rem;
+        height: 40px;
+        width: 120px;
+    }
+
 }
 
-.testimonials__header {
-    text-align: center;
-    font-size: 2rem;
-    margin: 20px;
-}
-
-.testimonials__component {
-    display: flex;
-    margin: 0 auto;
-    width: 95%;
-}
-
-.testimonials__left-button {
-    margin: auto 10px auto auto;
-    border: 3px solid black;
-    padding: 15px 20px;
-    border-radius: 50%;
-    border-color: red;
-    background-color: rgb(255, 167, 167);
-}
-
-.testimonial {
-    border: 3px solid green;
-    background-color: rgb(201, 253, 201);
-}
-
-.testimonials__right-button {
-    margin: auto auto auto 10px;
-    border: 3px solid black;
-    padding: 15px 20px;
-    border-radius: 50%;
-    border-color: red;
-    background-color: rgb(255, 167, 167);
-}
-
-.testimonials__person-image {
-    height: 100px;
-    width: 100px;
-    border: 1px solid black;
-    border-radius: 50%;
-}
-
-.testimonials__person-name {
-    padding-top: 15px;
-    font-size: 1.1rem;
-}
-
-.testimonials__review {
-    font-size: 0.9rem;
-}
 
 /************************************************************************************************************************
 DESKTOP - DESKTOP - DESKTOP - DESKTOP - DESKTOP - DESKTOP - DESKTOP - DESKTOP - DESKTOP - DESKTOP - DESKTOP - DESKTOP - D
 ************************************************************************************************************************/
 
 @media screen and (min-width: 768px) {
-   
+    .desktop-hide {
+        display: none;
+    }
+    
 /************************************************************
 *************************** Shared **************************
 ************************************************************/
     
     .navigation {
         padding: 40px 0;
+        background: rgb(16, 36, 50);
+        
     }
 
     .navigation__link-container {
         width: 70%;
-        margin: 0 auto;
+        margin: 0 auto; 
     }
 
     .navigation__link {
-        color: black;
+        color: rgb(254, 254, 252);
         font-weight: 700;
         font-size: 2rem;
         margin-right: 25px;
@@ -195,52 +305,14 @@ HOME PAGE - HOME PAGE - HOME PAGE - HOME PAGE - HOME PAGE - H
         font-size: 72px;
         line-height: normal;
         letter-spacing: 5px;
-        
+        text-align: center;
     }
 
     .hero__subheader {
         font-size: 48px;
         line-height: normal;
-    }
-
-    .hero2 {
-        font-size: 72px;
-    }
-
-    .hero3 {
-        background-color: red;
-    }
-
-    .hero3__header{
-        font-size:45px;
-        padding:11px;
-
-    }
-
-    .hero3__subheader{
-        font-size:45px;
-        padding:9px;
-
-    }
-
-    .hero4 {
-        background-color: rgb(234, 233, 233);
         text-align: center;
-        padding-top: 12px;
-        padding-bottom: 24px;
-        font-weight: normal;
-    }
-
-    .hero4__header {
-        font-size: 75px;
-        margin: 12px;
-        font-weight: lighter;
-    }
-
-    .hero4__subheader {
-        font-size: 50px;
-        font-weight: lighter;
-        letter-spacing: 1px;
+        margin-bottom: 50px;
     }
 
 /************************************************************
@@ -249,28 +321,27 @@ HOME PAGE - HOME PAGE - HOME PAGE - HOME PAGE - HOME PAGE - H
 
     .org__branding {
         font-family:Arial, Helvetica, sans-serif;
-        background-color: rgb(234, 233, 233);
-        width:70%;
-        margin-bottom: 20px;
+        background-color: #102432;
+        color: #fefefc;
+        width: 100%;
         display: flex;
         justify-content: space-around;
-        vertical-align: middle;
+        padding: 100px 0;
     }
 
-    .org__brading--header {
-        margin: auto;
+    /* Alternating background color and text color */
+    .mission {
+        background-color: #fefefc;
+        color: #102432;
     }
 
     .org__branding--details {
-    font-family:Arial, Helvetica, sans-serif;
-    font-size: 36px;
-    width: 70%
-    }
-
-    .org__branding--image {
-        background-color: black;
-        width: 160px;
-        height: 100%;
+        font-family:Arial, Helvetica, sans-serif;
+        font-size: 36px;
+        width: 70%;
+        display: flex;
+        align-items: center;
+        text-align: center;
     }
 
     .contact a img {
@@ -282,44 +353,53 @@ HOME PAGE - HOME PAGE - HOME PAGE - HOME PAGE - HOME PAGE - H
 ******************** testimonials carousel ******************
 ************************************************************/
 
+    .testimonials__carousel__header {
+        text-align: center;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        font-size: 3rem;
+    }
+
+
     .card-container {
         width: 80%;
         height: 400px;
-        margin: 200px auto;
+        margin: 0 auto 50px;
         display: flex;
         justify-content: center;
         align-items: center;
         position: relative;
-        overflow: hidden;
+        overflow: hidden; 
     }
     
     .card {
         position: relative;
         width: 600px;
         height: 400px;
-        background-color: white;
+        background-color:  rgb(16, 36, 50);
         border-radius: 10px;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        box-shadow: 0px 4px 20px 3px rgba(0, 0, 0, 0.1);
         text-align: center;
-        padding: 20px;
+        color: #fefefc;
+        padding: 20px;  
         transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
     }
     
     .card-container__previous-card {
         transform: translateX(25%) scale(0.8);
-        opacity: 0.5;
+        opacity: 0.8;
         z-index: 1;
     }
     
     .card-container__current-card {
-        transform: translateX(0) scale(1);
+        transform: translateX(0), scale(1);
         opacity: 1;
         z-index: 2;
     }
     
     .card-container__next-card {
         transform: translateX(-25%) scale(0.8);
-        opacity: 0.5;
+        opacity: 0.8;
         z-index: 1;
     }
     
@@ -343,30 +423,67 @@ HOME PAGE - HOME PAGE - HOME PAGE - HOME PAGE - HOME PAGE - H
 PROJECTS PAGE - PROJECTS PAGE - PROJECTS PAGE - PROJECTS PAGE
 ************************************************************/
 
+    .projects__header {
+        font-size: 72px;
+        text-align: center;
+    }
+
+    .projects__banner {
+        background-color: #102432;
+        padding: 50px 0;
+    }
+
+    .projects__banner-text {
+        color: #fefefc;
+        width: 60%;
+        margin: 0 auto;
+        font-size: 24px;
+        font-weight: lighter;
+        letter-spacing: 0.3rem;
+        line-height: 2.5rem;
+        text-align: center;
+    }
+
+    .projects__cards-container {
+        width: 60%;
+        margin: 60px auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
     .projects__card {
-        border: 1px solid black;
-        height: 400px;
-        width: 350px;
-        padding: 10px;
-        font-size: 12px;
+        background-color: #fefdfb;
+        height: 460px;
+        width: 320px;
+        padding: 15px;
+        font-size: 16px;
         font-family: Arial, Helvetica, sans-serif;
+        box-shadow: 0 4px 10px 3px #c3c6c1;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        cursor:pointer;
     }
 
     .project__image {
         width: 100%;
         height: 150px;
-        background-color: gray;
+        background-color: #838177;
         border-radius: 10px;
         font-size: 12px;
         font-family:Arial, Helvetica, sans-serif;
+        object-fit: fill;
     }
 
     .project__title {
         margin: 15px 0px 10px 0px ;
         font-size: 2rem;
+        /* flex-grow: 1; */
     }
     .project__description {
-        font-size: 0.9rem;
+        font-size: 1.1rem;
+        flex-grow: 1;
     }
 
     .project__bottom {
@@ -381,8 +498,8 @@ PROJECTS PAGE - PROJECTS PAGE - PROJECTS PAGE - PROJECTS PAGE
     .project__icon {
         margin-right: 5px;
         padding: 5px;
-        width: 50px;
-        height: 50px;
+        width: 45px;
+        height: 45px;
     }
 
     .project__button {

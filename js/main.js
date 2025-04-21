@@ -29,15 +29,13 @@ class TestimonialSlider {
 
     updateTestimonial () {
         const currentTestimonial = this.testimonials[this.index];
-       
         this.testimonialElement.innerHTML = `
-            <div class="testimonials__person">
-                <img id="testimonial_image" class="testimonials__person-image" src="${currentTestimonial.testimonial_image}" />
+            <div class="testimonials__component">
                 <div class="testimonials__person-name">
                     <span id="testimonial_name">${currentTestimonial.testimonial_name}</span>
                 </div>
             </div>
-            <p id="testimonial_review" class="testimonials__review">${currentTestimonial.review}"</p>
+            <p id="testimonial_review" class="testimonials__review">${currentTestimonial.testimonial}</p>
         `;
     }
 
@@ -100,10 +98,10 @@ class TestimonialSlider {
 }
 
 const testimonials = [
-    { testimonial_name: "John Doe", testimonial: "Great experience! Highly recommend!", testimonial_image: "Images/profiles/profile-1.png"},
-    { testimonial_name: "Tiffany ", testimonial: "Lovely!", testimonial_image: "Images/profiles/profile-2.png"},
-    { testimonial_name: "Brandon", testimonial: "Can't wait to come back", testimonial_image: "Images/profiles/profile-3.jpg"}, 
-    { testimonial_name: "T", testimonial: "I really enjoyed the workshop!", testimonial_image: "Images/profiles/profile-4.webp"},
+    { testimonial_name: "John Doe", testimonial: "Great experience! Highly recommend! Lorem ipsum odor amet, consectetuer adipiscing elit. Taciti felis netus mattis nascetur;  tempus suspendisse. Taciti felis netus mattis nascetur;  tempus suspendisse. Taciti felis netus mattis nascetur;  tempus suspendisse."},
+    { testimonial_name: "Tiffany ", testimonial: "Lovely! Lorem ipsum odor amet, consectetuer adipiscing elit. Taciti felis netus mattis nascetur;  tempus suspendisse. Taciti felis netus mattis nascetur;  tempus suspendisse. Taciti felis netus mattis nascetur;  tempus suspendisse."},
+    { testimonial_name: "Brandon", testimonial: "Can't wait to come back! Lorem ipsum odor amet, consectetuer adipiscing elit. Taciti felis netus mattis nascetur;  tempus suspendisse. Taciti felis netus mattis nascetur;  tempus suspendisse. Taciti felis netus mattis nascetur;  tempus suspendisse."}, 
+    { testimonial_name: "T", testimonial: "I really enjoyed the workshop! Lorem ipsum odor amet, consectetuer adipiscing elit. Taciti felis netus mattis nascetur;  tempus suspendisse. Taciti felis netus mattis nascetur;  tempus suspendisse. Taciti felis netus mattis nascetur;  tempus suspendisse."},
 ];
 
 const testimonialSlider = new TestimonialSlider(testimonials);
@@ -144,12 +142,15 @@ class TestimonialCarousel {
         card.id = className;
 
         const header = document.createElement("h2");
+        const subHeader = document.createElement("h3");
         const paragraph = document.createElement("p");
 
         header.innerText = review.name;
+        subHeader.innerText = review.title;
         paragraph.innerText = review.review;
 
         card.appendChild(header);
+        card.appendChild(subHeader);
         card.appendChild(paragraph);
 
         card.addEventListener("click", () => this.handleClick(className));
@@ -171,22 +172,27 @@ class TestimonialCarousel {
 const reviews = [
     {
         name: "Jim Peterson",
+        title: "This is title of review.",
         review: "This is the review card created by Jim Peterson"
     },
     {
         name: "Brandon",
+        title: "This is title of review.",
         review: "This is the review card created by Brandon"
     },
     {
         name: "Tiffany",
+        title: "This is title of review.",
         review: "This is the review card created by Tiffany"
     },
     {
         name: "Tee",
+        title: "This is title of review.",
         review: "This is the review card created by Tee"
     },
     {
         name: "Jean",
+        title: "This is title of review.",
         review: "This is the review card created by Jean"
     }
 ];
